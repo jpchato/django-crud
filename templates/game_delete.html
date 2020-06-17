@@ -1,11 +1,11 @@
 {% extends 'base.html' %}
 
 {% block content%}
-<h1> Game Delete </h1>
+<h1> Delete Game </h1>
 
 <form action="" method="POST">
     {% csrf_token %}
-    <p>Do you really want to delte ""</p>
+    <p>Do you really want to delete "{{ game.title }}"</p>
     <input type="submit" value="OK">
 </form>
 {% endblock content %}

@@ -1,5 +1,12 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>Game Detail</h1>
+<h1>{{ game.title }}</h1>
+<h2>Player: {{ game.player }}</h2>
+<p>{{ game.description }}</p>
+<ul>
+    <li><a href = "{% url 'game_update' game.pk %}"> + Edit Game </a></li>
+    <li><a href = "{% url 'game_delete' game.pk %}"> - Delete Game </a></li>
+</ul>
+
 {% endblock content %}
